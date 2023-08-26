@@ -1,5 +1,6 @@
 import "../styles.css"
 import StartNowBtn from "../Components/StartNowBtn"
+import NavBar from "../Navbar"
 //<a href="https://www.flaticon.com/free-icons/world-globe" title="world globe icons">World globe icons created by Freepik - Flaticon</a>
 //<a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Creaticca Creative Agency - Flaticon</a>
 //<a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Uniconlabs - Flaticon</a>
@@ -12,6 +13,8 @@ import StartNowBtn from "../Components/StartNowBtn"
 export default function Home() {
     return (
         <>
+            <NavBar />
+
             <img src="../images/Blue Circle.png" className="bg-circle"/>
             <img src="../images/Global News.png" className="globe"/>  
 

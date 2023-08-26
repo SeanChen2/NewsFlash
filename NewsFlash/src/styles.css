@@ -71,8 +71,8 @@ body {
     height: 1200px;
     width: 1200px;
     z-index: -2;
-    top: -50rem;
-    left: -25rem;
+    top: -32rem;
+    left: -23rem;
 }
 
 .globe {
@@ -80,7 +80,7 @@ body {
     height: 500px;
     width: auto;
     top: 10rem;
-    left: 50rem;
+    left: 55rem;
 }
 
 h1 {
