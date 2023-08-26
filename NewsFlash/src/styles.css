@@ -59,11 +59,11 @@ body {
 
 .bg-circle {
     position: absolute;
-    height: 1400px;
-    width: 1400px;
+    height: 1200px;
+    width: 1200px;
     z-index: -2;
-    top: -700px;
-    left: -500px;
+    top: -500px;
+    left: -350px;
 }
 
 .globe {
