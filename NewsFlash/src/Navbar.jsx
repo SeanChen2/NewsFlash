@@ -7,6 +7,7 @@ export default function Navbar() {
 
         <ul>
             <NavBtn to="/home">Home</NavBtn>
+            <NavBtn to="/mission">Mission</NavBtn>
             <NavBtn to="/about">About</NavBtn>
             <NavBtn to="/contact">Contact</NavBtn>
         </ul>
