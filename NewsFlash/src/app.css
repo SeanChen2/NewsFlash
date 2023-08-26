@@ -19,12 +19,13 @@
 .news-card-row {
     margin-left: 20rem;
     margin-right: 10rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     max-height: 15rem;
-    border-radius: 10px;
+    border-radius: 45px;
     display: flex;
     flex-direction: row;
     justify-content: start;
+    padding: 2rem 2rem;
 }
 
 .news-card-row:hover {
@@ -36,8 +37,9 @@
 }
 
 .news-image {
-    width: 15rem;
-    height: 15rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 6px;
 }
 
 .news-card-col {
