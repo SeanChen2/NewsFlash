@@ -1,7 +1,9 @@
+import "../styles.css"
+
 export default function ContentPage() {
     return (
         <>
-            <h1>H</h1>
+            <h1>Hi</h1>
         </>
     )
 }

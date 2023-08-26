@@ -50,6 +50,7 @@ body {
     margin-top: 0.1rem;
     font-size: 1.6rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .nav ul {
@@ -64,6 +65,7 @@ body {
 }
 
 .nav li a {
+    cursor: pointer;
     padding: 0.5rem 3rem;
 }
 
