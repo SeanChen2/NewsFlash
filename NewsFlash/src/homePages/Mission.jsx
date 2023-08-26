@@ -9,11 +9,11 @@ export default function Mission() {
                     style={{top: "-3rem", left: "0rem", width: "900px", height: "900px"}}/>
                 <img src="../images/News Stress.png" className="news-stress" />
 
-                <h1 className="big-text" style={{textAlign: "right"}}>
+                <h1 className="big-text" style={{textAlign: "right", paddingRight: "1.5rem"}}>
                     Our Mission
                 </h1>
 
-                <p className="small-text" style={{textAlign: "right"}}>
+                <p className="small-text" style={{textAlign: "right", paddingRight: "1.5rem"}}>
                     Keeping up with the news can be a tedious process. One must scour various news sources
                     and read thousands of words before they are caught up with the latest events. Here at
                     NewsFlash, we believe everyone deserves to be well informed - no matter how busy their

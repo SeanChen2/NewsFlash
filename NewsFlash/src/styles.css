@@ -25,10 +25,10 @@
 
 .content-right {
     padding-top: 2rem;
-    padding-left: 8rem;
+    padding-left: 10rem;
     position: relative;
     float: right;
-    margin-right: 10rem;
+    margin-right: 7rem;
 }
 
 .nav {
@@ -97,7 +97,7 @@ li > .active {
     height: 500px;
     width: auto;
     top: 8rem;
-    left: 55rem;
+    left: 53rem;
 }
 
 .news-stress {
@@ -105,7 +105,7 @@ li > .active {
     height: 500px;
     width: auto;
     top: 10rem;
-    left: -40rem;
+    left: -30rem;
 }
 
 .app-demo {

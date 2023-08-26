@@ -5,7 +5,7 @@ export default function About() {
     //ADD GRAPHIC FOR APP DEMO
     return (
         <>
-            <section className="content-left" id="about" style={{marginTop: "90rem"}}>
+            <section className="content-left" id="about" style={{marginTop: "95rem"}}>
                 <img src="../images/Blue Circle.png" className="bg-circle" 
                     style={{top: "0rem", left: "-10rem", width: "900px", height: "900px"}} />
                 <img src="../images/App Demo.gif" className="app-demo" />
