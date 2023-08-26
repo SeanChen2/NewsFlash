@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-body {
+.body-homepage {
     background: #5653FF;
     color: black;
     margin: 0 auto;
