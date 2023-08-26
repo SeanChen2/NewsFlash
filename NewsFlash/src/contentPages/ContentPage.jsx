@@ -3,7 +3,7 @@ import "../app.css"
 import React, { useEffect } from 'react';
 import SideBar from "../Components/SideBar";
 
-export default function ContentPage() {
+export default function ContentPage({category}) {
     useEffect(() => {
         document.body.className = 'body-app';
     })
