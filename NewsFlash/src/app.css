@@ -36,6 +36,10 @@
     font-size: 30px;
 }
 
+.news-short-text {
+    color: grey;
+}
+
 .news-image {
     width: 10rem;
     height: 10rem;
@@ -70,5 +74,5 @@
 
 .like-button.liked {
     color: red;
-    
+
 }

@@ -12,7 +12,8 @@ export default function ContentPage({category}) {
             <div className="news-pane">
                 <NewsCard
                     img={null}
-                    title="Site title"
+                    category="Sports"
+                    title="Site title 1"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                               Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
                     summary="Lorem ipsum is a Latin text placeholder."
@@ -20,6 +21,7 @@ export default function ContentPage({category}) {
 
                 <NewsCard
                     img={null}
+                    category="Entertainment"
                     title="Site title 2"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                               Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
@@ -28,6 +30,7 @@ export default function ContentPage({category}) {
 
                 <NewsCard
                     img={null}
+                    category="Business"
                     title="Site title 3"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                               Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   

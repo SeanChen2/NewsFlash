@@ -2,12 +2,16 @@ import "../app.css"
 import axios from 'axios'
 import LikeButton from "./LikeButton"
 
-export default function NewsCard({json, img, title, shortText, summary, ...props}) {
+export default function NewsCard({json, img, category, title, shortText, summary, ...props}) {
     return (
         <div className="news-card-row" {...props}>
             <img className="news-image" src={img == null ? "../images/Photo Placeholder.png" : img}/>
 
             <div className="news-card-col">
+                <p className="news-short-text">
+                    Category: {category}
+                </p>
+                
                 <h1>{title}</h1>
                 <p className="news-short-text">
                     {shortText}
@@ -18,14 +22,4 @@ export default function NewsCard({json, img, title, shortText, summary, ...props
 
         </div>
     )
-}
-
-const handleSubmit = async event => {
-    event.preventDefault();
-
-    try {
-        const response = await axios.post('https://localhost/update', json)
-    } catch(error) {
-        console.error('Error:', error)
-    }
 }
