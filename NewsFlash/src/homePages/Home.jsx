@@ -1,14 +1,6 @@
 import "../styles.css"
 import StartNowBtn from "../Components/StartNowBtn"
 import NavBar from "../Navbar"
-//<a href="https://www.flaticon.com/free-icons/world-globe" title="world globe icons">World globe icons created by Freepik - Flaticon</a>
-//<a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Creaticca Creative Agency - Flaticon</a>
-//<a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Uniconlabs - Flaticon</a>
-//<a href="https://www.flaticon.com/free-icons/article" title="article icons">Article icons created by Freepik - Flaticon</a>
-//<a href="https://www.flaticon.com/free-icons/stress" title="stress icons">Stress icons created by Eucalyp - Flaticon</a>
-//<a href="https://www.flaticon.com/free-icons/news" title="news icons">News icons created by Freepik - Flaticon</a>
-//<a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a>
-//<a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Freepik - Flaticon</a>
 
 export default function Home() {
     return (

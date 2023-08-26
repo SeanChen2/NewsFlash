@@ -89,7 +89,7 @@ li > .active {
 
 .bg-circle {
     position: absolute;
-    z-index: -2;
+    z-index: -1;
 }
 
 .globe {
@@ -122,12 +122,14 @@ h1 {
 
 .big-text {
     margin-top: 8rem;
+    z-index: 100000;
 }
 
 .small-text {
     font-size: 18px;
     line-height: 30px;
     width: 30rem;
+    z-index: 100000;
 }
 
 .start-now-btn {
@@ -140,6 +142,7 @@ h1 {
     width: 7rem;
     transition: transform .2s;
     position: absolute;
+    cursor: pointer;
 }
 
 .start-now-btn:hover {
