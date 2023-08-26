@@ -9,7 +9,15 @@ export default function ContentPage() {
 
     return (
         <>
-            <NewsCard/>
+            <div className="news-pane">
+                <NewsCard
+                    img="../images/Global News.png" 
+                    title="Site title"
+                    shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                              Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
+                    summary="Lorem ipsum is a Latin text placeholder."
+                />
+            </div>
         </>
     )
 }

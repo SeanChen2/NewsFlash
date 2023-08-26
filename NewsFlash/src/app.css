@@ -10,18 +10,38 @@
     overflow-x: hidden; /*Disable horizontal scroll*/
 }
 
-.news-card {
+.news-pane {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.news-card-row {
     margin-left: 20rem;
     margin-right: 10rem;
     margin-top: 3rem;
-    max-height: 20  rem;
+    max-height: 15rem;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
 }
 
-.news-card:hover {
+.news-card-row:hover {
     background-color: #DFE2FF;
 }
 
-.news-card h1 {
-    font-size: 40px;
+.news-card-row h1 {
+    font-size: 30px;
+}
+
+.news-image {
+    width: 15rem;
+    height: 15rem;
+}
+
+.news-card-col {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
 }
