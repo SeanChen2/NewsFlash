@@ -10,6 +10,10 @@
     overflow-x: hidden; /*Disable horizontal scroll*/
 }
 
+.container {
+    display: flex;
+}
+
 .news-pane {
     display: flex;
     flex-direction: column;
@@ -17,7 +21,7 @@
 }
 
 .news-card-row {
-    margin-left: 20rem;
+    margin-left: 16rem;
     margin-right: 10rem;
     margin-top: 1rem;
     max-height: 15rem;
@@ -52,6 +56,29 @@
     padding-left: 3rem;
 }
 
+.side-bar {
+    position: fixed;
+    height:100%;
+    background-color: #DEE5FF;
+    width: 12rem;
+}
+
+.side-bar-items {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    line-height: 2rem;
+}
+
+.side-bar-items a, .side-bar-items a:visited {
+    color: rgb(34, 33, 33);
+    text-decoration: none;
+}
+
+.side-bar-items a:hover {
+    background-color: #adb8e5;
+}
+
 .like-button {
     background-color: transparent;
     background-repeat: no-repeat;
@@ -70,9 +97,4 @@
 
 .like-button:hover {
     transform: scale(1.1);
-}
-
-.like-button.liked {
-    color: red;
-
 }
