@@ -9,7 +9,9 @@ export default function ContentPage() {
 
     return (
         <>
-            <NewsCard/>
+            <div className="news-pane">
+                <NewsCard/>
+            </div>
         </>
     )
 }

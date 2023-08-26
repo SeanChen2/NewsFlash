@@ -8,7 +8,7 @@ export default function About() {
             <section className="content-left" id="about" style={{marginTop: "90rem"}}>
                 <img src="../images/Blue Circle.png" className="bg-circle" 
                     style={{top: "0rem", left: "-10rem", width: "900px", height: "900px"}} />
-                <img src="../images/App Demo.gif" className="app-demo" />
+                <img src="../images/App Demo.gif" className="app-demo" alt="Fungus" />
 
                 <h1 className="big-text">
                     About NewsFlash

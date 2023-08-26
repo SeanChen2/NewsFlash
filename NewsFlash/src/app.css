@@ -10,6 +10,12 @@
     overflow-x: hidden; /*Disable horizontal scroll*/
 }
 
+.news-pane {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
 .news-card {
     margin-left: 20rem;
     margin-right: 10rem;

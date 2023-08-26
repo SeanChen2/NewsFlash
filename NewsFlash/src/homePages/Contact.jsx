@@ -45,7 +45,7 @@ export default function Contact() {
 
 function ContactInfo({ icon, children, ...props }) {
     return (
-        <li class="display-horizontally">
+        <li className="display-horizontally">
             <img className="contact-icon" src={icon} style={{ marginRight: "1rem" }} {...props} />
             {children}
         </li>
