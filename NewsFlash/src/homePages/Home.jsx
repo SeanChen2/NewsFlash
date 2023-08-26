@@ -15,10 +15,11 @@ export default function Home() {
         <>
             <NavBar />
 
-            <img src="../images/Blue Circle.png" className="bg-circle"/>
-            <img src="../images/Global News.png" className="globe"/>  
-
-            <div className="content">
+            <section className="content-left" id="home">
+                <img src="../images/Blue Circle.png" className="bg-circle" 
+                    style={{top: "-32rem", left: "-23rem", width: "1200px", height: "1200px"}}/>
+                <img src="../images/Global News.png" className="globe"/>
+                
                 <h1 className="big-text">
                     Thousands of reputable<br/>
                     news sources. One app.
@@ -32,7 +33,7 @@ export default function Home() {
                 </p>
 
                 <StartNowBtn>Start now</StartNowBtn>
-            </div>
+            </section>
         </>
     )
 }
