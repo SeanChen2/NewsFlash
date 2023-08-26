@@ -4,7 +4,7 @@ import "./styles.css"
 
 export default function Navbar() {
     return <nav className="nav">
-        <Link to="/" className="site-title">NewsFlash</Link>
+        <ScrollLink activeClass="active" smooth spy to="home" className="site-title">NewsFlash</ScrollLink>
 
         <ul>
             <NavBtn to="home">Home</NavBtn>
