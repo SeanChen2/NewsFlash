@@ -1,12 +1,12 @@
 import "../styles.css"
 import StartNowBtn from "../Components/StartNowBtn"
+//<a href="https://www.flaticon.com/free-icons/world-globe" title="world globe icons">World globe icons created by Freepik - Flaticon</a>
 
 export default function Home() {
     return (
         <>
-            <div className="bg-circle-container">
-                <img src="../images/Blue Circle.png" className="bg-circle"/>
-            </div>
+            <img src="../images/Blue Circle.png" className="bg-circle"/>
+            <img src="../images/Global News.png" className="globe"/>  
 
             <div className="content">
                 <h1 className="big-text">

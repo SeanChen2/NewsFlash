@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #ffffff;
+    background: #5653FF;
     color: black;
     margin: 0 auto;
 }
@@ -58,18 +58,21 @@ body {
     background-color: #777;
 }
 
-.bg-circle-container {
-    position: absolute;
-    height: 1000px;
-    width: 1000px;
-}
-
 .bg-circle {
     position: absolute;
-    height: 1000px;
-    width: 1000px;
+    height: 1400px;
+    width: 1400px;
     z-index: -2;
-    object-position: top -300px left -200px;
+    top: -700px;
+    left: -500px;
+}
+
+.globe {
+    position: absolute;
+    height: 500px;
+    width: auto;
+    top: 130px;
+    left: 900px;
 }
 
 h1 {
