@@ -1,0 +1,101 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    color: black;
+    margin: 0 auto;
+}
+
+.content {
+    padding-top: 2rem;
+    padding-left: 8rem;
+    position: relative;
+}
+
+.nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: stretch;
+    gap: 6rem;
+    /*minimum hor. space between elements*/
+    padding: 0 1rem;
+    /*space from edges of navbar (y, x)*/
+}
+
+.site-title {
+    font-size: 2rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /*Remove bullet points*/
+    display: flex;
+    gap: 3rem;
+}
+
+/*anchor tag: for links <a>*/
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+}
+
+.nav li.active {
+    background-color: #555;
+}
+
+.nav li:hover {
+    background-color: #777;
+}
+
+.bg-circle-container {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+}
+
+.bg-circle {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    z-index: -2;
+    object-position: top -300px left -200px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.big-text {
+    margin-top: 8rem;
+}
+
+.small-text {
+    font-size: 18px;
+    line-height: 30px;
+    width: 30rem;
+}
+
+.start-now-btn {
+    background-color: #3159E4;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 6px;
+    width: 7rem;
+    transition: transform .2s;
+}
+
+.start-now-btn:hover {
+    transform: scale(1.1);
+}
