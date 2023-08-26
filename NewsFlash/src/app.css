@@ -47,3 +47,28 @@
     flex-direction: column;
     padding-left: 3rem;
 }
+
+.like-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    fill: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s;
+}
+
+.like-button img {
+    width: 25px;
+    height: 25px;
+}
+
+.like-button:hover {
+    transform: scale(1.1);
+}
+
+.like-button.liked {
+    color: red;
+    
+}

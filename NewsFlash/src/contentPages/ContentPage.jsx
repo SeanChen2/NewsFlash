@@ -2,7 +2,7 @@ import NewsCard from "../Components/NewsCard"
 import "../app.css"
 import React, { useEffect } from 'react';
 
-export default function ContentPage() {
+export default function ContentPage({category}) {
     useEffect(() => {
         document.body.className = 'body-app';
     })
