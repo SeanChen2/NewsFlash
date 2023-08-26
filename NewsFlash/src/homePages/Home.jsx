@@ -1,14 +1,17 @@
 import "../styles.css"
 import StartNowBtn from "../Components/StartNowBtn"
-//<a href="https://www.flaticon.com/free-icons/world-globe" title="world globe icons">World globe icons created by Freepik - Flaticon</a>
+import NavBar from "../Navbar"
 
 export default function Home() {
     return (
         <>
-            <img src="../images/Blue Circle.png" className="bg-circle"/>
-            <img src="../images/Global News.png" className="globe"/>  
+            <NavBar />
 
-            <div className="content">
+            <section className="content-left" id="home">
+                <img src="../images/Blue Circle.png" className="bg-circle" 
+                    style={{top: "-32rem", left: "-23rem", width: "1200px", height: "1200px"}}/>
+                <img src="../images/Global News.png" className="globe"/>
+                
                 <h1 className="big-text">
                     Thousands of reputable<br/>
                     news sources. One app.
@@ -22,7 +25,7 @@ export default function Home() {
                 </p>
 
                 <StartNowBtn>Start now</StartNowBtn>
-            </div>
+            </section>
         </>
     )
 }

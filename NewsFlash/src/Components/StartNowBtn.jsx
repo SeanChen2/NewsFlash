@@ -1,8 +1,11 @@
+import {Link} from "react-router-dom"
 
-export default function StartNowBtn({children}) {
+export default function StartNowBtn({children, ...props}) {
     return (
-        <button className="start-now-btn">
-            {children}
-        </button>
+        <Link to="/app">
+            <button className="start-now-btn"  {...props}>
+                {children}
+            </button>
+        </Link>
     )
 }

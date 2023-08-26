@@ -1,18 +1,14 @@
-import NavBar from "./Navbar"
 import "./styles.css"
-import Home from "./pages/Home"
+import FullHomepage from "./FullHomepage"
+import ContentPage from "./contentPages/ContentPage"
 import {Route, Routes} from "react-router-dom"
 
 export default function App() {
   return (
     <>
-    <NavBar />
-    
     <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<Home />} />
-        <Route path="/contact" element={<Home />} />
+        <Route path="/" element={<FullHomepage />} />
+        <Route path="/app" element={<ContentPage />} />
     </Routes>
     </>
   )
