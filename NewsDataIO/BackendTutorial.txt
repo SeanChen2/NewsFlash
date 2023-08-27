@@ -18,7 +18,7 @@
 - Output: Nothing
 
 
-/search_articles/category
+/search_articles_category
 - Description: Should be called every time the user clicks a new category to generate articles of.
                Note: While each time a category is selected by the user and articles are to be generated, this should be called, this doesn't actually return the articles. To get the articles, you must call the route '/get_articles/category'
 - Input: JSON data in following format:
@@ -28,7 +28,7 @@
 - Output: Nothing
 
 
-/get_articles/category
+/get_articles_category
 - Description: Should be used to retrieve 10 articles that fall under the category specified when route 'search_articles/category' was called.
                Note: Each call of this route is essentially a refresh, and returns 10 new articles that fall under the specified category.
 - Input: Nothing
@@ -38,7 +38,7 @@
 }
 
 
-/search_articles/keywords
+/search_articles_keywords
 - Description: Should be called every time the user clicks the search button after providing 1 to 5 keywords to generate articles of.
                Note: While each time the user clicks the search buttons after providing the keywords this route should be called, this doesn't actually return the articles. To get the articles, you must call the route '/get_articles/keywords'
 - Input: JSON data in following format:
@@ -48,7 +48,7 @@
 - Output: Nothing
 
 
-/get_articles/keywords
+/get_articles_keywords
 - Description: Should be used to retrieve 10 articles that have one of the keywords specified when route 'search_articles/keyword' was called.
                Note: Each call of this route is essentially a refresh, and returns 10 new articles that contain the desired keywords.
 - Input: Nothing
