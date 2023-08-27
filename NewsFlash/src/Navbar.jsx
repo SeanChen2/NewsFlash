@@ -1,27 +1,30 @@
 import {Link, useMatch, useResolvedPath} from "react-router-dom"   //Replaces all <a> tags
+import {Link as ScrollLink} from "react-scroll"
 import "./styles.css"
 
 export default function Navbar() {
     return <nav className="nav">
-        <Link to="/" className="site-title">NewsFlash</Link>
+        <img src="../images/Logo.png" className="title-logo"
+                        style={{ width: "32px", height: "32px"}} />
+        <ScrollLink activeClass="active" smooth spy to="home" className="site-title">NewsFlash</ScrollLink>
 
         <ul>
-            <NavBtn to="/home">Home</NavBtn>
-            <NavBtn to="/mission">Mission</NavBtn>
-            <NavBtn to="/about">About</NavBtn>
-            <NavBtn to="/contact">Contact</NavBtn>
+            <NavBtn to="home">Home</NavBtn>
+            <NavBtn to="mission">Mission</NavBtn>
+            <NavBtn to="about">About</NavBtn>
+            <NavBtn to="contact">Contact</NavBtn>
         </ul>
     </nav>
 }
 
 function NavBtn({ to, children, ...props }) {
-    //This function turns relative paths to absolulte paths
-    const resolvedPath = useResolvedPath(to)
-    const isActive = useMatch({path: resolvedPath.pathname, end: true})
-                                                            //must completely match
     return (
-        <li className={isActive ? "active" : ""}>
-            <Link to={to} {...props}>{children}</Link>
+        <li>
+            <ScrollLink 
+                activeClass="active" 
+                smooth spy to={to} 
+                {...props}
+            >{children}</ScrollLink>
         </li>
     )
 }

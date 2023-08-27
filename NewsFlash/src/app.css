@@ -1,0 +1,162 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 83%;
+    background-color:black;
+    height: 3px;
+    margin-left: 2rem;
+}
+
+.body-app {
+    background: white;
+    color: black;
+    margin: 0 auto;
+    overflow-x: hidden; /*Disable horizontal scroll*/
+}
+
+.container {
+    display: flex;
+}
+
+.news-pane {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-bottom: 2rem;
+    margin-left: 20rem;
+    max-width: 1380px;
+}
+
+.news-card-row {
+    margin-right: 10rem;
+    margin-top: 1rem;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 1.5rem 2rem;
+}
+
+.news-card-row:hover {
+    background-color: #DFE2FF;
+}
+
+.news-card-row-summary {
+    background-color: #B7BEFF;
+    margin-right: 10rem;
+    margin-top: 1rem;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 1.5rem 2rem;
+}
+
+.news-card-row h1, .news-card-row-summary h1 {
+    font-size: 30px;
+}
+
+.news-short-text {
+    color: grey;
+}
+
+.news-image {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 6px;
+}
+
+.news-card-col {
+    padding-left: 3rem;
+}
+
+.side-bar {
+    position: fixed;
+    height: 100%;
+    background-color: #DEE5FF;
+    width: 12rem;
+}
+
+.side-bar h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.side-bar-items {
+    list-style-type: none;
+    padding: 0;
+    list-style: none;
+    line-height: 2rem;
+}
+
+.side-bar-items a, .side-bar-items a:visited {
+    display: flex;
+    justify-content: center;
+    color: rgb(34, 33, 33);
+    text-decoration: none;
+}
+
+.side-bar-items a:hover {
+    background-color: #adb8e5;
+}
+
+.like-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    fill: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    transition: transform 0.2s;
+}
+
+.like-button img {
+    width: 25px;
+    height: 25px;
+}
+
+.like-button:hover {
+    transform: scale(1.1);
+}
+
+.summarize-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    fill: none;
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.summarize-button img {
+    width: 120px;
+    height: 30px;
+}
+
+.summarize-button:hover {
+    transform: scale(1.1);
+}
+
+.summary-hide {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.summary-show {
+    height: auto;
+    max-height: 9999px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
