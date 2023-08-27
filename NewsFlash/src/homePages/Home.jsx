@@ -8,16 +8,22 @@ export default function Home() {
             <NavBar />
 
             <section className="content-left" id="home">
-                <img src="../images/Blue Circle.png" className="bg-circle" 
-                    style={{top: "-32rem", left: "-30rem", width: "1200px", height: "1200px"}}/>
+                <div className="logo">
+                    <img src="../images/Logo.png" className="logo-image"
+                        style={{ width: "50px", height: "50px" }} />
+                    <h1>NewsFlash</h1>
+                </div>
 
-                <img src="../images/Blue Circle.png" className="bg-circle" 
-                    style={{top: "-32rem", left: "95rem", width: "1200px", height: "1200px"}}/>
+                <img src="../images/Blue Circle.png" className="bg-circle"
+                    style={{ top: "-32rem", left: "-30rem", width: "1200px", height: "1200px" }} />
 
-                <img src="../images/Global News.png" className="globe"/>
-                
+                <img src="../images/Blue Circle.png" className="bg-circle"
+                    style={{ top: "-32rem", left: "95rem", width: "1200px", height: "1200px" }} />
+
+                <img src="../images/Global News.png" className="globe" />
+
                 <h1 className="big-text">
-                    Thousands of reputable<br/>
+                    Thousands of reputable<br />
                     news sources. One app.
                 </h1>
 
@@ -30,7 +36,7 @@ export default function Home() {
 
                 <StartNowBtn>Start now</StartNowBtn>
 
-                
+
             </section>
         </>
     )

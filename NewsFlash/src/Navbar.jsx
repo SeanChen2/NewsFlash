@@ -4,6 +4,8 @@ import "./styles.css"
 
 export default function Navbar() {
     return <nav className="nav">
+        <img src="../images/Logo.png" className="title-logo"
+                        style={{ width: "32px", height: "32px"}} />
         <ScrollLink activeClass="active" smooth spy to="home" className="site-title">NewsFlash</ScrollLink>
 
         <ul>

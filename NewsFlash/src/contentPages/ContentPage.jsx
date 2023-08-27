@@ -18,7 +18,7 @@ export default function ContentPage({category}) {
             <SideBar />
             <div className="news-pane">
                 <h1 style={{margin: "2rem"}}>Recommended</h1>
-                <hr/>
+                <hr className="header-line"/>
 
                 <NewsCard
                     img={null}
