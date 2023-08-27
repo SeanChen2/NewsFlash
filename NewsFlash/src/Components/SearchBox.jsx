@@ -3,15 +3,13 @@ import axios from "axios"
 
 export default function SearchBox() {
     const [searchWords, setSearchWords] = useState("")
-    const [searchJson, setSearchJson] = useState({keywords:"pizza"})
-    const [foo, setFoo] = useState({})
 
     const handleSubmit = async event => {
-        event.preventDefault()  
-        console.log(searchWords)
+        event.preventDefault()
 
         if (searchWords.replace(" ", "") === "") {
             console.log("returned2")
+            return
         }
         if (searchWords.split(" ").length < 1 || searchWords.split(" ").length > 5) {
             console.log("returned1")
@@ -19,23 +17,22 @@ export default function SearchBox() {
             return
         }
 
-        setSearchJson({keywords: searchWords})
+        console.log(JSON.stringify({searchWords}))
         
         try {
-            const status = await axios.post('http://localhost:5000/search_articles_keywords', searchJson)
-            const articles = await axios.get('http://localhost:5000/get_articles_keywords').then(res => {
+            const status = await axios.post('/api/search_articles_keywords', {searchWords})
+            const articles = await axios.get('/api/get_articles_keywords').then(res => {
                 const yourSavedData = res.data;
                 console.log(yourSavedData)
             })
 
 
-            // crossOriginIsolated.log(status)
             console.log(articles)
         } catch (error) {
             console.error(error)
         }
 
-        // setSearchWords("")
+        setSearchWords("")
     }
 
     return (

@@ -8,19 +8,19 @@ export default function Home() {
             <NavBar />
 
             <section className="content-left" id="home">
-                <div className="logo">
+                <div className="logo" style={{ marginTop: "6rem" }}>
                     <img src="../images/Logo.png" className="logo-image"
-                        style={{ width: "50px", height: "50px" }} />
+                        style={{ width: "50px", height: "50px"}} />
                     <h1>NewsFlash</h1>
                 </div>
 
                 <img src="../images/Blue Circle.png" className="bg-circle"
-                    style={{ top: "-32rem", left: "-30rem", width: "1200px", height: "1200px" }} />
+                    style={{ top: "-30rem", left: "-25rem", width: "1200px", height: "1200px" }} />
 
                 <img src="../images/Blue Circle.png" className="bg-circle"
-                    style={{ top: "-32rem", left: "95rem", width: "1200px", height: "1200px" }} />
+                    style={{ top: "-33rem", left: "80rem", width: "1200px", height: "1200px" }} />
 
-                <img src="../images/Global News.png" className="globe" />
+                <img src="../images/Global News.png" className="globe" />   
 
                 <h1 className="big-text">
                     Thousands of reputable<br />
