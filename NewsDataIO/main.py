@@ -7,18 +7,18 @@ import random
 import math
 from collections import defaultdict
 from flask_cors import CORS
+import os
+
 
 app = Flask(__name__)
 
 CORS(app, origins=["http://localhost:5000"])
 
-# from UserCatering import UserCatering
-# from NewsDataIOAPI import NewsDataIOAPI
 
 # API keys
 NEWSDATAIO_KEY = 'pub_280110c642d9d222eba07138df500a7a41a78'
 MEANINGCLOUD_KEY = '307374128d7188e4511bf691577f75ba'
-USER_JSON_PATH = "C:\\My Stuff\\Education\\Web Development\\ByteNews-App\\NewsDataIO\\User.json"
+USER_JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'User.json')
 
 api = NewsDataApiClient(NEWSDATAIO_KEY)
 
@@ -137,7 +137,7 @@ class CategoryArticles:
         
     def generate_articles(self, results_key:Optional[str]='results', content_key:Optional[str]='content'):
         settings = Articles.default_article_settings
-        settings['category'] = self.category_name
+        settings['category'] = None if self.category_name=='random' else self.category_name
         
         if(self.nextPage==None):
             pass
@@ -318,6 +318,8 @@ def update_user_catering_likes():
         raise Exception("BACKEND ERROR: 'liked' key in JSON data received from frontend should have value of either 1 (post was liked) or 0 (post was unliked), but it's value was: "+str(liked))
     
     user_catering.update_category_preferences(category, int(liked))
+    
+    return jsonify({'status':'successful'})
 
 
 
@@ -342,6 +344,7 @@ def search_articles_category():
         raise Exception("BACKEND ERROR: 'category' key is not present in JSON data passed to backend")
     
     categorical_articles.search(desired_category)
+    return jsonify({'status':'successful'})
 
 @app.route("/get_articles/category", methods=['GET', 'POST'])
 def get_articles_category():
@@ -371,6 +374,7 @@ def search_articles_keywords():
         raise Exception("BACKEND ERROR: 'keywords' key is not present in JSON data passed to backend")
     
     keywords_articles.search(desired_keywords)
+    return jsonify({'status':'successful'})
 
 @app.route("/get_articles/keywords", methods=['GET', 'POST'])
 def get_articles_keywords():
