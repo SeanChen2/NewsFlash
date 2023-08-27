@@ -91,7 +91,7 @@ li > .active {
     height: 500px;
     width: auto;
     top: 8rem;
-    left: 53rem;
+    left: 50rem;
 }
 
 .news-stress {
@@ -99,7 +99,7 @@ li > .active {
     height: 500px;
     width: auto;
     top: 10rem;
-    left: -33rem;
+    left: -27rem;
 }
 
 .app-demo {
@@ -236,7 +236,7 @@ h1 {
 }
 
 .footer-line {
-    position: absolute;
+    
     background-color: white;
     width: 100%;
 }
