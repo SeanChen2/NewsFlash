@@ -53,6 +53,16 @@
     cursor: pointer;
 }
 
+.title-logo {
+    filter: invert(1);
+}
+
+.title-logo-text {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
 .nav ul {
     align-items: center;
     margin: 0;
@@ -118,6 +128,7 @@ h1 {
     margin-top: 3rem;
     width: 25rem;
     display: flex;
+    gap: 0.5rem;
     align-items: center;
 }
 
