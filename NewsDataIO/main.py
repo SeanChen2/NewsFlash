@@ -14,8 +14,7 @@ app = Flask(__name__)
 
 # CORS(app, resources={r"/search_articles/*":{"origins":"http://localhost:5174"}})
 # CORS(app, resources={r"/search_articles_keywords": {"origins": "http://localhost:5174"}}
-CORS(app, origins="http://localhost:5174")
-
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 # API keys
@@ -360,7 +359,10 @@ def search_articles_category():
 def get_articles_category():
     return jsonify({'articles':filter_array_of_articles(categorical_articles.generate_articles())})
 
-
+@app.route("/get_articles_keywords", methods=['GET', 'POST'])
+# @app.route("/get_articles/keywords", methods=['GET', 'POST'])
+def get_articles_keywords():
+    return jsonify({'articles':filter_array_of_articles(keywords_articles.generate_articles())})
 
 
 @app.route("/search_articles_keywords", methods=['GET', 'POST'])
@@ -389,13 +391,6 @@ def search_articles_keywords():
     
     keywords_articles.search(desired_keywords)
     return jsonify({'status':'successful'})
-
-@app.route("/get_articles_keywords", methods=['GET', 'POST'])
-# @app.route("/get_articles/keywords", methods=['GET', 'POST'])
-def get_articles_keywords():
-    return jsonify({'articles':filter_array_of_articles(keywords_articles.generate_articles())})
-    
-
 
 # @app.route("/get_custom_articles", methods=['GET', 'POST'])
 # def get_custom_articles():

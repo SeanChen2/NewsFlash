@@ -1,6 +1,13 @@
 import {useState} from "react"
 import axios from "axios"
 
+let axiosConfig = {
+    headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Allow-Origin": "*",
+    }
+  };
+
 export default function SearchBox() {
     const [keywords, setKeywords] = useState("")
 
@@ -16,8 +23,8 @@ export default function SearchBox() {
         console.log(JSON.stringify({keywords: keywords}))
         
         try {
-            const status = await axios.post('/api/search_articles_keywords', JSON.stringify({keywords: keywords}))
-            const articles = await axios.get('/api/get_articles_keywords').then(res => {
+            const status = await axios.post('http://localhost:5000/search_articles_keywords', JSON.stringify({keywords: keywords}), axiosConfig, { method: 'get', mode: 'cors' })
+            const articles = await axios.get('http://localhost:5000/get_articles_keywords').then(res => {
                 const yourSavedData = res.data;
                 console.log(yourSavedData)
             })

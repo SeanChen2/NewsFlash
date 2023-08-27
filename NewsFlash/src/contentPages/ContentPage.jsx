@@ -16,7 +16,7 @@ export default function ContentPage({category}) {
     useEffect(() => {
         (async () => {
             try {
-                const newsData = axios.post("http://localhost:5000/api/get_new_articles", request)
+                const newsData = axios.post("/api/get_new_articles", request)
             } catch (error) {
                 console.error("Error:", error)
             }
