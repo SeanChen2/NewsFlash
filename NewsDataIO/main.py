@@ -380,6 +380,8 @@ def search_articles_keywords():
     if data == None:
         raise Exception("BACKEND ERROR: 'request.json' was None (keyword)")
 
+    print(type(data))
+
     desired_keywords = data.get('keywords')
     
     if desired_keywords == None:
