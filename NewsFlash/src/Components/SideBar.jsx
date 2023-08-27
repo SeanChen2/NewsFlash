@@ -10,9 +10,7 @@ export default function SideBar() {
                 {SidebarData.map((item, index) => {
                     return (
                         <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                                <span>{item.title}</span>
-                            </Link>
+                            <Link to={item.path}> {item.title} </Link>
                         </li>
                     )
                 })}
