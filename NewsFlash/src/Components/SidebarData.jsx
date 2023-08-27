@@ -6,8 +6,8 @@ export const SidebarData = [
     },
     {
         title: "Business",
-        path: "/recommended",
-        cName: "recommended-text"
+        path: "/business",
+        cName: "business-text"
     },
     {
         title: "Entertainment",
