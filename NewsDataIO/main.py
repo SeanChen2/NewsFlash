@@ -12,7 +12,10 @@ import os
 
 app = Flask(__name__)
 
-CORS(app, origins=["http://localhost:5000"])
+# CORS(app, resources={r"/search_articles/*":{"origins":"http://localhost:5174"}})
+# CORS(app, resources={r"/search_articles_keywords": {"origins": "http://localhost:5174"}}
+CORS(app, origins="http://localhost:5174")
+
 
 
 # API keys
@@ -28,7 +31,7 @@ url = "https://api.meaningcloud.com/summarization-1.0"
 default_article_settings = {
     'language':'en',
     'prioritydomain':'medium',
-    'image':1,
+    'image':True,
     'size':10,
     'page':None
 }
@@ -64,7 +67,7 @@ def get_text_summary(txt:str, summary_num_sentences:int=5)->str:
     return response.json()['summary']
 
 
-def cut_off_n_words(txt:str, n:int):
+def cut_off_n_words(txt:str, n:int=30):
     words = txt.split(' ')
     
     if(len(words)<=n):
@@ -271,6 +274,9 @@ class ArticlesArrayGen(Articles):
             raise Exception("BACKEND EXCEPTION: 'ArticlesArrayGen' class, 'generate_articles' function was called before 'search' function")
 
         api_ret = api.news_api(**self.settings)
+
+        # print('sushi')
+        # print(api_ret)
         
         self.settings['page'] = api_ret['nextPage']
         
@@ -324,8 +330,9 @@ def update_user_catering_likes():
 
 
 
-@app.route("/search_articles/category", methods=['GET', 'POST'])
+@app.route("/search_articles_category", methods=['GET', 'POST'])
 def search_articles_category():
+
     '''
     JSON data format:
     {
@@ -344,18 +351,23 @@ def search_articles_category():
         raise Exception("BACKEND ERROR: 'category' key is not present in JSON data passed to backend")
     
     categorical_articles.search(desired_category)
+
+    print(desired_category)
+
     return jsonify({'status':'successful'})
 
-@app.route("/get_articles/category", methods=['GET', 'POST'])
+@app.route("/get_articles_category", methods=['GET', 'POST'])
 def get_articles_category():
     return jsonify({'articles':filter_array_of_articles(categorical_articles.generate_articles())})
 
 
 
 
-
-@app.route("/search_articles/keywords", methods=['GET', 'POST'])
+@app.route("/search_articles_keywords", methods=['GET', 'POST'])
+# @app.route("/search_articles/keywords", methods=['GET', 'POST'])
 def search_articles_keywords():
+    print("\n\n\naoesnuhda\n\n")
+
     '''
     JSON data format:
     {
@@ -374,9 +386,13 @@ def search_articles_keywords():
         raise Exception("BACKEND ERROR: 'keywords' key is not present in JSON data passed to backend")
     
     keywords_articles.search(desired_keywords)
+    print(';hgadslifujg\n\nhaiosdfg '+desired_keywords)
+    print(data)
+    print('----')
     return jsonify({'status':'successful'})
 
-@app.route("/get_articles/keywords", methods=['GET', 'POST'])
+@app.route("/get_articles_keywords", methods=['GET', 'POST'])
+# @app.route("/get_articles/keywords", methods=['GET', 'POST'])
 def get_articles_keywords():
     return jsonify({'articles':filter_array_of_articles(keywords_articles.generate_articles())})
     
