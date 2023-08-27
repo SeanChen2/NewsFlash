@@ -2,7 +2,6 @@ import "./styles.css"
 import FullHomepage from "./FullHomepage"
 import ContentPage from "./contentPages/ContentPage"
 import {Route, Routes} from "react-router-dom"
-import ContentPageRouter from "./contentPages/ContentPageRouter"
 
 export default function App() {
   return (

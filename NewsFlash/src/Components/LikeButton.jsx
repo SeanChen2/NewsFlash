@@ -1,4 +1,5 @@
 import {useState} from "react"
+import axios from "axios"
 
 export default function LikeButton({json, ...props}) {
     const [liked, setLiked] = useState(false)

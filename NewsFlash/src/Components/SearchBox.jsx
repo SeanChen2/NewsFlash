@@ -1,15 +1,33 @@
 import {useState} from "react"
+import axios from "axios"
 
 export default function SearchBox() {
     const [searchWords, setSearchWords] = useState("")
+    const [searchJson, setSearchJson] = useState({keywords:""})
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        if (searchWords === "") return
+    const handleSubmit = async event => {
+        event.preventDefault()
 
-        //request data using search words
+        if (searchWords.replace(" ", "") === "") {
+            console.log("returned")
+        }
+        if (searchWords.split(" ").length < 1 || searchWords.split(" ").length > 5) {
+            console.log("returned")
+            //ERROR MESSAGE
+            return
+        }
 
-        setSearchWords("")
+        // setSearchJson({keywords: searchWords})
+        
+        try {
+            await axios.post('http://localhost:5000/search_articles/keywords', searchJson)
+            const articles = await axios.get('http://localhost:5000/get_articles/keywords')
+            console.log(articles)
+        } catch (error) {
+            console.error(error)
+        }
+
+        // setSearchWords("")
     }
 
     return (
