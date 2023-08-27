@@ -182,41 +182,38 @@ h1 {
     height: 25px;
 }
 
-.footer-section-padding {
+/* .footer-section-padding {
     padding: 4rem 4rem;
-}
+} */
 
 .contact-footer {
     background-color: #4543c7;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .footer-columns {
     display: flex;
-    justify-content: space-between;
+    gap: 50rem;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
     text-align: left;
     margin-bottom: 2rem;
 }
 
 .col {
-    width: 30rem;
-    margin: 1rem;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
     color: white;
 }
 
 .footer-below {
+    background-color: #2c2a7e;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 0.2rem;
 }
 
 .footer-credits {
@@ -242,7 +239,7 @@ h1 {
     margin-top: 2rem;
 }
 
-.list-unstyled {
+.contact-list {
     list-style: none;
 }
 
