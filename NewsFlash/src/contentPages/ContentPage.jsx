@@ -71,6 +71,64 @@ export default function ContentPage({ category }) {
                     shortText="In exactly four weeks, Super Nintendo World will open at Universal Studios Hollywood and it looks to be any classic gamer’s dream come true...."
                     summary="Super Nintendo World is set to open at Universal Studios Hollywood in four weeks, offering an immersive environment that recreates the world of classic Nintendo games. The park features an entrance through a green warp tube leading to the Mushroom Kingdom, complete with pixelated cliffs, question mark blocks, and iconic elements from the Super Mario Bros. games. Inside, guests can explore rooms themed to Yoshi's Story and Super Stars before heading to Bowser's Castle. The main attraction is the augmented reality ride/game 'Mario Kart: Bowser's Challenge,' where visitors wear visors to interact with virtual items and compete against Team Bowser for the Golden Cup. The park also offers interactive games, challenges, and themed food options. It is set to open on February 17."
                 />
+
+                <NewsCard
+                    img="https://www.sciencenews.org/wp-content/uploads/2023/08/082623_lucid-dreams_cover-art_feat.jpg"
+                    categories="Science"
+                    title="Here’s what lucid dreamers might tell us about our sleeping minds"
+                    shortText="When Christopher Mazurek realizes he’s dreaming, it’s always the small stuff that tips him off.
+                    The first time it happened, Mazurek was a freshman at Northwestern University in Evanston, Ill..."
+                    summary="Super Nintendo World is set to open at Universal Studios Hollywood in four weeks, offering an immersive environment that recreates the world of classic Nintendo games. The park features an entrance through a green warp tube leading to the Mushroom Kingdom, complete with pixelated cliffs, question mark blocks, and iconic elements from the Super Mario Bros. games. Inside, guests can explore rooms themed to Yoshi's Story and Super Stars before heading to Bowser's Castle. The main attraction is the augmented reality ride/game 'Mario Kart: Bowser's Challenge,' where visitors wear visors to interact with virtual items and compete against Team Bowser for the Golden Cup. The park also offers interactive games, challenges, and themed food options. It is set to open on February 17."
+                />
+
+                <NewsCard
+                    img={null}
+                    categories="Health"
+                    title="Site Title 5"
+                    shortText="Lorem ipsum dolor sit amet. Sed rerum voluptatem aut quam dicta qui accusantium odit ut voluptatibus deleniti et esse earum cum dolore blanditiis a quas earum. Eos officiis libero At blanditiis velit qui omnis rerum..."
+                    summary="Lorem ipsum is a placeholder text."
+                />
+
+<NewsCard
+                    img={null}
+                    categories="Health"
+                    title="Site Title 6"
+                    shortText="Lorem ipsum dolor sit amet. Sed rerum voluptatem aut quam dicta qui accusantium odit ut voluptatibus deleniti et esse earum cum dolore blanditiis a quas earum. Eos officiis libero At blanditiis velit qui omnis rerum..."
+                    summary="Lorem ipsum is a placeholder text."
+                />
+
+<NewsCard
+                    img={null}
+                    categories="Health"
+                    title="Site Title 7"
+                    shortText="Lorem ipsum dolor sit amet. Sed rerum voluptatem aut quam dicta qui accusantium odit ut voluptatibus deleniti et esse earum cum dolore blanditiis a quas earum. Eos officiis libero At blanditiis velit qui omnis rerum..."
+                    summary="Lorem ipsum is a placeholder text."
+                />
+
+<NewsCard
+                    img={null}
+                    categories="Health"
+                    title="Site Title 8"
+                    shortText="Lorem ipsum dolor sit amet. Sed rerum voluptatem aut quam dicta qui accusantium odit ut voluptatibus deleniti et esse earum cum dolore blanditiis a quas earum. Eos officiis libero At blanditiis velit qui omnis rerum..."
+                    summary="Lorem ipsum is a placeholder text."
+                />
+
+<NewsCard
+                    img={null}
+                    categories="Health"
+                    title="Site Title 9"
+                    shortText="Lorem ipsum dolor sit amet. Sed rerum voluptatem aut quam dicta qui accusantium odit ut voluptatibus deleniti et esse earum cum dolore blanditiis a quas earum. Eos officiis libero At blanditiis velit qui omnis rerum..."
+                    summary="Lorem ipsum is a placeholder text."
+                />
+
+<NewsCard
+                    img={null}
+                    categories="Health"
+                    title="Site Title 10"
+                    shortText="Lorem ipsum dolor sit amet. Sed rerum voluptatem aut quam dicta qui accusantium odit ut voluptatibus deleniti et esse earum cum dolore blanditiis a quas earum. Eos officiis libero At blanditiis velit qui omnis rerum..."
+                    summary="Lorem ipsum is a placeholder text."
+                />
+
             </div>
         </div>
     )
