@@ -18,9 +18,11 @@
 }
 
 .content-left {
-    flex-direction: column;
-    width: 50%;
+    background-color: white;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40%;
     padding-top: 2rem;
     padding-left: 8rem;
     position: relative;
@@ -95,12 +97,9 @@ li > .active {
 }
 
 .globe {
-    float: right;
     position: absolute;
-    height: 500px;
-    width: auto;
-    top: 8rem;
-    left: 70rem;
+    top: 4rem;
+    left: 55rem;
 }
 
 .news-stress {
