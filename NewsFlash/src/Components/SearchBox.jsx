@@ -26,11 +26,11 @@ export default function SearchBox() {
         console.log(JSON.stringify({keywords: keywords}))
         
         try {
-            const status = await axios.post('http://localhost:5000/search_articles_keywords', JSON.stringify({keywords: keywords}), axiosConfig, { method: 'get', mode: 'cors' })
+            const status = await axios.post('http://localhost:5000/search_articles_keywords', JSON.stringify({keywords: keywords}), axiosConfig)
             const articles = await axios.get('http://localhost:5000/get_articles_keywords').then(res => {
                 const yourSavedData = res.data;
                 console.log(yourSavedData)
-            })
+            },)
 
             console.log(articles)
         } catch (error) {
