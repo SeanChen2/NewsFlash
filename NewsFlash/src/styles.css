@@ -92,19 +92,21 @@ li > .active {
 }
 
 .globe {
+    float: right;
     position: absolute;
     height: 500px;
     width: auto;
     top: 8rem;
-    left: 53rem;
+    left: 70rem;
 }
 
 .news-stress {
+    float: left;
     position: absolute;
     height: 500px;
     width: auto;
     top: 10rem;
-    left: -30rem;
+    left: -60rem;
 }
 
 .app-demo {
