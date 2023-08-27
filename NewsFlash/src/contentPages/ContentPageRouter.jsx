@@ -20,7 +20,6 @@ export default function ContentPageRouter() {
             <Route path="/tourism" element={<ContentPage category="Tourism"/>}/>
             <Route path="/world" element={<ContentPage category="World"/>}/>
             <Route path="/search" element={<ContentPage category="Search"/>}/>
-            <Route path="*" element={<p>Path not resolved</p>} />
         </Routes>
     )
 }

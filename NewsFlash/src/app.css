@@ -89,6 +89,48 @@ hr {
     margin-bottom: 2rem;
 }
 
+.search-box-form {
+    margin-top: 1.2rem;
+    margin-left: 0.7rem;
+    margin-bottom: 2rem;
+}
+
+.search-box-form input {
+    outline: none;
+    border: 1px solid #B3B3B3;
+    background: white;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    color: black;
+    height: 2rem;
+}
+
+.search-box-form input:focus {
+    border: 1px solid #7a7a7a;
+}
+
+.mag-glass-btn {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    fill: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 3;
+    position: absolute;
+    top: 1.5rem;
+    left: 9rem;
+}
+
+.mag-glass-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.mag-glass-btn:hover {
+    transform: scale(1.1);
+}
+
 .side-bar-items {
     list-style-type: none;
     padding: 0;

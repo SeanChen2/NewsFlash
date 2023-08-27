@@ -32,6 +32,7 @@ export default function Contact() {
                             <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a>
                             <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Freepik - Flaticon</a>
                             <a href="https://www.flaticon.com/free-icons/down-chevron" title="down chevron icons">Down chevron icons created by Icon mania - Flaticon</a>
+                            <a href="https://www.flaticon.com/free-icons/search" title="search icons">Search icons created by Royyan Wijaya - Flaticon</a>
                         </div>
                         <div className="footer-copyright">
                             <p> @{new Date().getFullYear()} NewsFlash. All rights reserved.</p>

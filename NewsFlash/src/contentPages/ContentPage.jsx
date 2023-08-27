@@ -5,19 +5,28 @@ import SideBar from "../Components/SideBar"
 import axios from "axios"
 
 export default function ContentPage({category}) {
+    const [request, setRequest] = useState({quantity: "10", type: "catered"})
+
     useEffect(() => {
         document.body.className = 'body-app';
     })
 
     //Retrieve json for 10 articles
-    const [request, setRequest] = useState({quantity: "10", type: "catered"})
-    const newsData = axios.post("http://localhost:5000/api/get_new_articles", request)
+    useEffect(() => {
+        (async () => {
+            try {
+                const newsData = axios.post("http://localhost:5000/api/get_new_articles", request)
+            } catch (error) {
+                console.error("Error:", error)
+            }
+        })
+    })
 
     return (
         <div className="container">
             <SideBar />
             <div className="news-pane">
-                <h1 style={{margin: "2rem"}}>{category}</h1>
+                <h1 style={{margin: "3rem 2rem"}}>{category}</h1>
                 <hr/>
 
                 <NewsCard
