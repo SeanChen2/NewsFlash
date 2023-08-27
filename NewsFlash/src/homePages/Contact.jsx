@@ -22,9 +22,6 @@ export default function Contact() {
                     <hr />
 
                     <div className="footer-below">
-                        <div className="footer-copyright">
-                            <p> @{new Date().getFullYear()} NewsFlash. All rights reserved.</p>
-                        </div>
                         <div className="footer-credits">
                             <a href="https://www.flaticon.com/free-icons/world-globe" title="world globe icons">World globe icons created by Freepik - Flaticon</a>
                             <a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Creaticca Creative Agency - Flaticon</a>
@@ -34,6 +31,10 @@ export default function Contact() {
                             <a href="https://www.flaticon.com/free-icons/news" title="news icons">News icons created by Freepik - Flaticon</a>
                             <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Pixel perfect - Flaticon</a>
                             <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Freepik - Flaticon</a>
+                            <a href="https://www.flaticon.com/free-icons/down-chevron" title="down chevron icons">Down chevron icons created by Icon mania - Flaticon</a>
+                        </div>
+                        <div className="footer-copyright">
+                            <p> @{new Date().getFullYear()} NewsFlash. All rights reserved.</p>
                         </div>
                     </div>
 

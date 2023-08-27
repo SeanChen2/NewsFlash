@@ -189,7 +189,7 @@ h1 {
 
 .footer-below {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 0.2rem;
 }
@@ -197,6 +197,7 @@ h1 {
 .footer-credits {
     display: flex;
     flex-direction: row;
+    margin-top: 2rem;
 }
 
 .footer-credits a {
@@ -212,6 +213,8 @@ h1 {
     line-height: 15px;
     color: white;
     font-weight: 600;
+    text-align: center;
+    margin-top: 2rem;
 }
 
 .list-unstyled {
