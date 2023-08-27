@@ -4,6 +4,10 @@ export default function Contact() {
     return (
         <>
             <div className="contact-footer" id="contact" style={{ marginTop: "50rem" }}>
+                <img src="../images/Blue Circle.png" className="bg-circle"
+                    style={{ top: "200rem", left: "-20rem", width: "700px", height: "700px", zIndex: "9" }} />
+                <img src="../images/Blue Circle.png" className="bg-circle"
+                    style={{ top: "190rem", left: "90rem", width: "700px", height: "700px", zIndex: "9" }} />
                 <div className="footer-columns">
                     <div className="col">
                         <h1>Got questions?
