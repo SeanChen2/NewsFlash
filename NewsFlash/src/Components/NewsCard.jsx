@@ -4,7 +4,7 @@ import LikeButton from "./LikeButton"
 import SummarizePanel from "./SummarizePanel"
 import {useState} from "react"
 
-export default function NewsCard({json, img, category, title, shortText, summary, ...props}) {
+export default function NewsCard({json, img, categories, title, shortText, summary, ...props}) {
     const [showSummary, setShowSummary] = useState(false)
 
     function handleSummary() {
@@ -18,7 +18,7 @@ export default function NewsCard({json, img, category, title, shortText, summary
 
             <div className="news-card-col">
                 <p className="news-short-text">
-                    Category: {category}
+                    Category: {typeof categories == "object" ? categories.join(", ") : categories}
                 </p>
 
                 <h1>{title}</h1>

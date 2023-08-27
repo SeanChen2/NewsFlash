@@ -17,12 +17,12 @@ export default function ContentPage({category}) {
         <div className="container">
             <SideBar />
             <div className="news-pane">
-                <h1 style={{margin: "2rem"}}>Recommended</h1>
-                <hr className="header-line"/>
+                <h1 style={{margin: "2rem"}}>{category}</h1>
+                <hr/>
 
                 <NewsCard
                     img={null}
-                    category="Sports"
+                    categories={["Sports", "Entertainment"]}
                     title="Site title 1"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                               Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
@@ -36,7 +36,7 @@ export default function ContentPage({category}) {
 
                 <NewsCard
                     img={null}
-                    category="Entertainment"
+                    categories="Entertainment"
                     title="Site title 2"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                               Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
@@ -45,7 +45,7 @@ export default function ContentPage({category}) {
 
                 <NewsCard
                     img={null}
-                    category="Business"
+                    categories="Business"
                     title="Site title 3"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                               Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
