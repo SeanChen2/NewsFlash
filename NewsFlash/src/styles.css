@@ -19,7 +19,7 @@
 
 .content-left {
     padding-top: 2rem;
-    padding-left: 8rem;
+    padding-left: 6rem;
     position: relative;
 }
 
@@ -104,7 +104,7 @@ li > .active {
     height: 500px;
     width: auto;
     top: 10rem;
-    left: -30rem;
+    left: -35rem;
 }
 
 .app-demo {
