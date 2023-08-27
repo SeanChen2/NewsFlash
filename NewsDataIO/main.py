@@ -257,7 +257,7 @@ class ArticlesArrayGen(Articles):
     def __init__(self, feature_type):
         super().__init__()
         
-        if feature_type != 'category' and feature_type != 'q':
+        if feature_type != 'category' and feature_type != 'q' and feature_type != 'qInTitle':
             raise Exception("BACKEND EXCEPTION: 'feature_type' paramater must be either 'category' or 'q'")
 
         self.feature_type = feature_type
@@ -284,7 +284,7 @@ class ArticlesArrayGen(Articles):
         
         
 categorical_articles = ArticlesArrayGen('category')
-keywords_articles = ArticlesArrayGen('q')  # keywords should be like "{'keywords': 'keyword1 keyword2 keyword3 ...'}"
+keywords_articles = ArticlesArrayGen('qInTitle')  # keywords should be like "{'keywords': 'keyword1 keyword2 keyword3 ...'}"
 
 
 @app.route("/get_catered_feed", methods=['GET', 'POST'])
@@ -364,7 +364,7 @@ def get_articles_category():
 
 
 @app.route("/search_articles_keywords", methods=['GET', 'POST'])
-# @app.route("/search_articles/keywords", methods=['GET', 'POST'])
+#@app.route("/search_articles/keywords", methods=['GET', 'POST'])
 def search_articles_keywords():
     print("\n\n\naoesnuhda\n\n")
 
@@ -386,9 +386,6 @@ def search_articles_keywords():
         raise Exception("BACKEND ERROR: 'keywords' key is not present in JSON data passed to backend")
     
     keywords_articles.search(desired_keywords)
-    print(';hgadslifujg\n\nhaiosdfg '+desired_keywords)
-    print(data)
-    print('----')
     return jsonify({'status':'successful'})
 
 @app.route("/get_articles_keywords", methods=['GET', 'POST'])
