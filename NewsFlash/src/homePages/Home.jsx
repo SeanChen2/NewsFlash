@@ -13,6 +13,8 @@ export default function Home() {
 
                 <img src="../images/Blue Circle.png" className="bg-circle" 
                     style={{top: "-32rem", left: "95rem", width: "1200px", height: "1200px"}}/>
+
+                <img src="../images/Global News.png" className="globe"/>
                 
                 <h1 className="big-text">
                     Thousands of reputable<br/>
@@ -28,7 +30,7 @@ export default function Home() {
 
                 <StartNowBtn>Start now</StartNowBtn>
 
-                <img src="../images/Global News.png" className="globe"/>
+                
             </section>
         </>
     )

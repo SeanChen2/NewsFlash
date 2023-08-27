@@ -5,6 +5,7 @@ import { SidebarData } from "./SidebarData"
 export default function SideBar() {
     return (
         <div className="side-bar">
+            <h1>Categories</h1>
             <ul className="side-bar-items">
                 {SidebarData.map((item, index) => {
                     return (

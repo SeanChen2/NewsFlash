@@ -73,19 +73,35 @@
     width: 12rem;
 }
 
+.side-bar h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
 .side-bar-items {
+    list-style-type: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
     list-style: none;
     line-height: 2rem;
 }
 
 .side-bar-items a, .side-bar-items a:visited {
+    background-color: red;
+    width: 100%;
     color: rgb(34, 33, 33);
     text-decoration: none;
 }
 
-.side-bar-items a:hover {
+.side-bar-items li {
+    width: 100%;
+    text-align: center;
+}
+
+.side-bar-items li:hover {
     background-color: #adb8e5;
 }
 
