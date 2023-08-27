@@ -35,47 +35,42 @@
     background-color: #4543c7;
     color: white;
     display: flex;
-    align-items: stretch;
-    gap: 5rem;
+    align-items: center;
+    gap: 2rem;
     /*minimum hor. space between elements*/
     padding: 0 1.5rem;
     /*space from edges of navbar (y, x)*/
     position: fixed;
     width: 100%;
+    height:4rem;
     z-index: 10;
+    filter: drop-shadow(0 0 0.7rem black);
 }
 
 .site-title {
-    position: relative;
-    margin-top: 0.1rem;
     font-size: 1.6rem;
     font-weight: bold;
     cursor: pointer;
 }
 
 .nav ul {
-    position: relative;
-    left: -3rem;
+    align-items: center;
     margin: 0;
     list-style: none;
     /*Remove bullet points*/
     display: flex;
-    /* gap: 3rem; */
-}
-
-.nav li a {
-    cursor: pointer;
-    padding: 0.5rem 3rem;
 }
 
 /*anchor tag: for links <a>*/
 .nav a {
     color: inherit;
     text-decoration: none;
-    height: 100%;
     display: flex;
-    align-items: center;
-    padding: .25rem;
+}
+
+.nav li a {
+    cursor: pointer;
+    padding: 0.7rem 3rem;
 }
 
 li > .active {
@@ -93,10 +88,10 @@ li > .active {
 
 .globe {
     position: absolute;
-    height: 500px;
+    height: 450px;
     width: auto;
     top: 8rem;
-    left: 53rem;
+    left: 50rem;
 }
 
 .news-stress {
@@ -104,7 +99,7 @@ li > .active {
     height: 500px;
     width: auto;
     top: 10rem;
-    left: -33rem;
+    left: -27rem;
 }
 
 .app-demo {
@@ -119,9 +114,28 @@ h1 {
     font-size: 3rem;
 }
 
+.logo {
+    margin-top: 3rem;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2rem !important;
+}
+
 .big-text {
     margin-top: 8rem;
     z-index: 100000;
+}
+
+#home .big-text {
+    margin-top: 1rem !important;
+}
+
+#home {
+    height: 33rem;
 }
 
 .small-text {
@@ -219,4 +233,10 @@ h1 {
 
 .list-unstyled {
     list-style: none;
+}
+
+.footer-line {
+    
+    background-color: white;
+    width: 100%;
 }

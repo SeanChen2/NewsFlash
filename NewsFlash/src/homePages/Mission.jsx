@@ -9,7 +9,7 @@ export default function Mission() {
                     style={{ top: "-3rem", left: "0rem", width: "900px", height: "900px" }} />
 
                 <img src="../images/Blue Circle.png" className="bg-circle"
-                    style={{ top: "-5rem", left: "-100rem", width: "800px", height: "800px" }} />
+                    style={{ top: "-8rem", left: "-100rem", width: "900px", height: "900px" }} />
 
                 <img src="../images/News Stress.png" className="news-stress" />
 

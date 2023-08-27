@@ -19,7 +19,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <hr />
+                    <hr className="footer-line"/>
 
                     <div className="footer-below">
                         <div className="footer-credits">
