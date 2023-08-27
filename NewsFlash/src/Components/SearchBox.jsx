@@ -1,4 +1,5 @@
 import {useState} from "react"
+import { useNavigate } from "react-router-dom";
 import axios from "axios"
 
 let axiosConfig = {
@@ -10,6 +11,7 @@ let axiosConfig = {
 
 export default function SearchBox() {
     const [keywords, setKeywords] = useState("")
+    const navigate = useNavigate();
 
     const handleSubmit = async event => {
         event.preventDefault()
@@ -20,6 +22,7 @@ export default function SearchBox() {
             return
         }
 
+        
         console.log(JSON.stringify({keywords: keywords}))
         
         try {
@@ -29,10 +32,9 @@ export default function SearchBox() {
                 console.log(yourSavedData)
             })
 
-
             console.log(articles)
         } catch (error) {
-            console.error(error.response.data)
+            console.error(error)
         }
 
         setKeywords("")
