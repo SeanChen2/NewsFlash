@@ -1,7 +1,6 @@
 import "../app.css"
 import axios from 'axios'
 import LikeButton from "./LikeButton"
-import SummarizePanel from "./SummarizePanel"
 import {useState} from "react"
 
 export default function NewsCard({json, img, categories, title, shortText, summary, ...props}) {

@@ -202,3 +202,25 @@ hr {
     transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 11rem;
+}
+
+.refresh-button {
+    border: none;
+    cursor: pointer;
+    width: 7rem;
+    height: 3rem;
+    transition: transform 0.2s;
+    border-radius: 10px;
+    margin-top: 3rem;
+    background-color: #5c7ffa;
+    color: white;
+}
+
+.refresh-button:hover {
+    transform: scale(1.1);
+}

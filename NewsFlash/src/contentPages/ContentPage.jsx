@@ -3,6 +3,7 @@ import "../app.css"
 import React, { useEffect, useState } from 'react'
 import SideBar from "../Components/SideBar"
 import axios from "axios"
+import RefreshButton from "../Components/RefreshButton"
 
 export default function ContentPage({category}) {
     const [request, setRequest] = useState({quantity: "10", type: "catered"})
@@ -26,7 +27,11 @@ export default function ContentPage({category}) {
         <div className="container">
             <SideBar />
             <div className="news-pane">
-                <h1 style={{margin: "3rem 2rem"}}>{category}</h1>
+                <div className="flex-row">
+                    <h1 style={{margin: "3rem 2rem"}}>{category}</h1>
+                    <RefreshButton/>
+                </div>
+
                 <hr/>
 
                 <NewsCard
