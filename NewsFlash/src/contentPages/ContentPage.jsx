@@ -17,13 +17,21 @@ export default function ContentPage({category}) {
         <div className="container">
             <SideBar />
             <div className="news-pane">
+                <h1 style={{margin: "2rem"}}>Recommended</h1>
+                <hr/>
+
                 <NewsCard
                     img={null}
                     category="Sports"
                     title="Site title 1"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                               Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
-                    summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+                    anim id est laborum."
                 />
 
                 <NewsCard

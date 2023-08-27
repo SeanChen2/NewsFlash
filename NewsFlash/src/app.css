@@ -3,6 +3,16 @@
     box-sizing: border-box;
 }
 
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 83%;
+    background-color:black;
+    height: 3px;
+    margin-left: 2rem;
+}
+
 .body-app {
     background: white;
     color: black;
@@ -19,10 +29,11 @@
     flex-direction: column;
     justify-content: start;
     padding-bottom: 2rem;
+    margin-left: 20rem;
+    max-width: 1380px;
 }
 
 .news-card-row {
-    margin-left: 16rem;
     margin-right: 10rem;
     margin-top: 1rem;
     border-radius: 45px;
@@ -38,7 +49,6 @@
 
 .news-card-row-summary {
     background-color: #B7BEFF;
-    margin-left: 16rem;
     margin-right: 10rem;
     margin-top: 1rem;
     border-radius: 45px;
