@@ -9,7 +9,10 @@ export default function Home() {
 
             <section className="content-left" id="home">
                 <img src="../images/Blue Circle.png" className="bg-circle" 
-                    style={{top: "-32rem", left: "-23rem", width: "1200px", height: "1200px"}}/>
+                    style={{top: "-32rem", left: "-30rem", width: "1200px", height: "1200px"}}/>
+
+                <img src="../images/Blue Circle.png" className="bg-circle" 
+                    style={{top: "-32rem", left: "95rem", width: "1200px", height: "1200px"}}/>
                 
                 <h1 className="big-text">
                     Thousands of reputable<br/>

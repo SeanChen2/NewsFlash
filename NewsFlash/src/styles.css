@@ -18,13 +18,8 @@
 }
 
 .content-left {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 40%;
     padding-top: 2rem;
-    padding-left: 8rem;
+    padding-left: 6rem;
     position: relative;
 }
 
@@ -98,17 +93,18 @@ li > .active {
 
 .globe {
     position: absolute;
-    top: 4rem;
-    left: 55rem;
+    height: 500px;
+    width: auto;
+    top: 8rem;
+    left: 53rem;
 }
 
 .news-stress {
-    float: left;
     position: absolute;
     height: 500px;
     width: auto;
     top: 10rem;
-    left: -60rem;
+    left: -35rem;
 }
 
 .app-demo {
