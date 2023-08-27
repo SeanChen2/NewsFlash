@@ -5,8 +5,8 @@ import SideBar from "../Components/SideBar"
 import axios from "axios"
 import RefreshButton from "../Components/RefreshButton"
 
-export default function ContentPage({category}) {
-    const [request, setRequest] = useState({quantity: "10", type: "catered"})
+export default function ContentPage({ category }) {
+    const [request, setRequest] = useState({ quantity: "10", type: "catered" })
 
     useEffect(() => {
         document.body.className = 'body-app';
@@ -16,10 +16,17 @@ export default function ContentPage({category}) {
     useEffect(() => {
         (async () => {
             try {
-                const newsData = axios.post("/api/get_new_articles", request)
+                const status = await axios.post('http://localhost:5000/search_articles_category', {category})
+                const articles = await axios.get('http://localhost:5000/get_articles_category').then(res => {
+                    const yourSavedData = res.data;
+                    console.log(yourSavedData)
+                },)
+
+                console.log(articles)
             } catch (error) {
-                console.error("Error:", error)
+                console.error(error.response.data)
             }
+
         })
     })
 
@@ -28,18 +35,18 @@ export default function ContentPage({category}) {
             <SideBar />
             <div className="news-pane">
                 <div className="flex-row">
-                    <h1 style={{margin: "3rem 2rem"}}>{category}</h1>
-                    <RefreshButton/>
+                    <h1 style={{ margin: "3rem 2rem" }}>{category}</h1>
+                    <RefreshButton />
                 </div>
 
-                <hr/>
+                <hr />
 
                 <NewsCard
                     img={null}
                     categories={["Sports", "Entertainment"]}
                     title="Site title 1"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                              Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
+                              Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."
                     summary="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
@@ -53,7 +60,7 @@ export default function ContentPage({category}) {
                     categories="Entertainment"
                     title="Site title 2"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                              Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
+                              Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."
                     summary="Lorem ipsum is a Latin text placeholder."
                 />
 
@@ -62,7 +69,7 @@ export default function ContentPage({category}) {
                     categories="Business"
                     title="Site title 3"
                     shortText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                              Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."   
+                              Quisque sodales dui et lacinia pharetra. Curabitur maximus lacus nec molestie..."
                     summary="Lorem ipsum is a Latin text placeholder."
                 />
             </div>
