@@ -6,6 +6,11 @@ from typing import Optional, Union
 import random
 import math
 from collections import defaultdict
+from flask_cors import CORS
+
+app = Flask(__name__)
+
+CORS(app, origins=["http://localhost:5000"])
 
 # from UserCatering import UserCatering
 # from NewsDataIOAPI import NewsDataIOAPI
@@ -13,9 +18,7 @@ from collections import defaultdict
 # API keys
 NEWSDATAIO_KEY = 'pub_280110c642d9d222eba07138df500a7a41a78'
 MEANINGCLOUD_KEY = '307374128d7188e4511bf691577f75ba'
-USER_JSON_PATH = "User.json"
-
-app = Flask(__name__)
+USER_JSON_PATH = "C:\\My Stuff\\Education\\Web Development\\ByteNews-App\\NewsDataIO\\User.json"
 
 api = NewsDataApiClient(NEWSDATAIO_KEY)
 
