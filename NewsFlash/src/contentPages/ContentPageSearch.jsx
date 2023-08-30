@@ -4,9 +4,12 @@ import React, { useEffect, useState } from 'react'
 import SideBar from "../Components/SideBar"
 import axios from "axios"
 import RefreshButton from "../Components/RefreshButton"
+import {useLocation} from "react-router-dom"
 
-export default function ContentPage({ category }) {
+export default function ContentPageSearch() {
     const [request, setRequest] = useState({ quantity: "10", type: "catered" })
+    const {state} = useLocation()
+    const {keywords} = state
     const [articles, setArticles] = useState(null)
 
     let axiosConfig = {
@@ -23,10 +26,13 @@ export default function ContentPage({ category }) {
     //Retrieve json for 10 articles
     useEffect(() => {
         const fetchData = async () => {
+            console.log(JSON.stringify({keywords: keywords}))
             try {
-                const status = await axios.post('http://localhost:5000/search_articles_category', JSON.stringify({category: category}), axiosConfig)
-                const articlesResult = await axios.get('http://localhost:5000/get_articles_category')
+                const status = await axios.post('http://localhost:5000/search_articles_keywords', JSON.stringify({keywords: keywords}), axiosConfig)
+                const articlesResult = await axios.get('http://localhost:5000/get_articles_keywords')
                 setArticles(articlesResult.data)
+
+                console.log(articlesResult.data)
             } catch (error) {
                 console.error(error.response.data)
             }
@@ -34,18 +40,18 @@ export default function ContentPage({ category }) {
         }
 
         fetchData().catch(console.error)
-    }, [category])
+    }, [keywords])
 
     return (
         <div className="container">
             <SideBar />
             <div className="news-pane">
                 <div className="flex-row">
-                    <h1 style={{ margin: "3rem 2rem" }}>Category: {category}</h1>
+                    <h1 style={{ margin: "3rem 2rem" }}>Search Results: {keywords}</h1>
                     <RefreshButton />
                 </div>
 
-                <hr />
+                <hr/>
 
                 {
                     /* Render a NewsCard for every article IF it has been set */
@@ -59,7 +65,7 @@ export default function ContentPage({ category }) {
                             summary={article['summary']}
                         />
                         )
-                    )) : null   //This is where a loading icon would be placed
+                    )) : null
                 }
 
             </div>

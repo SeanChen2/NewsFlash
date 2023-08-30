@@ -2,29 +2,30 @@ import "./styles.css"
 import FullHomepage from "./FullHomepage"
 import ContentPage from "./contentPages/ContentPage"
 import {Route, Routes} from "react-router-dom"
+import ContentPageSearch from "./contentPages/ContentPageSearch"
 
 export default function App() {
   return (
     <>
     <Routes>
         <Route path="/" element={<FullHomepage />} />
-        <Route path="/app" element={<ContentPage category="Recommended"/>}>
+        <Route path="/app" element={<ContentPage category="top"/>}>
         </Route>
     </Routes>
     <Routes>
-      <Route path="/recommended" element={<ContentPage category="Recommended"/>}/>
-      <Route path="/business" element={<ContentPage category="Business"/>}/>
-      <Route path="/entertainment" element={<ContentPage category="Entertainment"/>}/>
-      <Route path="/environment" element={<ContentPage category="Environment"/>}/>
-      <Route path="/food" element={<ContentPage category="Food"/>}/>
-      <Route path="/health" element={<ContentPage category="Health"/>}/>
-      <Route path="/politics" element={<ContentPage category="Politics"/>}/>
-      <Route path="/science" element={<ContentPage category="Science"/>}/>
-      <Route path="/sports" element={<ContentPage category="Sports"/>}/>
-      <Route path="/tech" element={<ContentPage category="Tech"/>}/>
-      <Route path="/tourism" element={<ContentPage category="Tourism"/>}/>
-      <Route path="/world" element={<ContentPage category="World"/>}/>
-      <Route path="/search" element={<ContentPage category="Search"/>}/>
+      <Route path="/recommended" element={<ContentPage category="top"/>}/>
+      <Route path="/business" element={<ContentPage category="business"/>}/>
+      <Route path="/entertainment" element={<ContentPage category="entertainment"/>}/>
+      <Route path="/environment" element={<ContentPage category="environment"/>}/>
+      <Route path="/food" element={<ContentPage category="food"/>}/>
+      <Route path="/health" element={<ContentPage category="health"/>}/>
+      <Route path="/politics" element={<ContentPage category="politics"/>}/>
+      <Route path="/science" element={<ContentPage category="science"/>}/>
+      <Route path="/sports" element={<ContentPage category="sports"/>}/>
+      <Route path="/tech" element={<ContentPage category="tech"/>}/>
+      <Route path="/tourism" element={<ContentPage category="tourism"/>}/>
+      <Route path="/world" element={<ContentPage category="world"/>}/>
+      <Route path="/search" element={<ContentPageSearch/>}/>
     </Routes>
     </>
   )

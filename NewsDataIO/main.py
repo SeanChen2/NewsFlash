@@ -18,7 +18,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 # API keys
-NEWSDATAIO_KEY = 'pub_280110c642d9d222eba07138df500a7a41a78'
+NEWSDATAIO_KEY = 'pub_280010a2f299cabd8155e602c0b2f81d29e79'
 MEANINGCLOUD_KEY = '307374128d7188e4511bf691577f75ba'
 USER_JSON_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'User.json')
 
@@ -50,6 +50,9 @@ def write_user_json_with_dict(path:str, dic:dict):
 
 
 def get_text_summary(txt:str, summary_num_sentences:int=5)->str:
+    #MUST FIX: generate summary each time the summary button is clicked, instead of right away
+    return ""
+
     payload={
         'key': MEANINGCLOUD_KEY,
         'txt': txt,
@@ -62,13 +65,14 @@ def get_text_summary(txt:str, summary_num_sentences:int=5)->str:
     
     # if(status_code!="200"):  # test to see if this is true
     #     raise IOError("BACKEND HAS RISEN EXCEPTION: Text summary using meaningcloud API has failed!")
+    print("==================================", response.json(), "======================================")
 
     return response.json()['summary']
 
 
 def cut_off_n_words(txt:str, n:int=30):
     words = txt.split(' ')
-    
+
     if(len(words)<=n):
         return txt
     else:
@@ -116,6 +120,13 @@ def filter_array_of_articles(arr:[dict])->[dict]:
     new_array = []
     
     for article in arr:
+        if (article['content'] == None):
+            if (article['description'] == None):
+                article['content'] = "This article has no content."
+            else:
+                article['content'] = article['description']
+            
+        print("-----------------------------------", article, "--------------------------------------")
         new_array.append(filter_article(article))
         
     return new_array
@@ -202,7 +213,7 @@ class UserCatering:
         write_user_json_with_dict(USER_JSON_PATH, self.category_preferences)
             
             
-    def get_article_from_category(self, a_category):
+    def from_category(self, a_category):
         
         new_article = None
         while True:
@@ -267,11 +278,18 @@ class ArticlesArrayGen(Articles):
         self.feature_value = feature_value
         self.settings[self.feature_type] = self.feature_value
         self.settings['page'] = None
+
+        if (self.feature_type != 'category'):
+            self.settings.pop('category', None)
+            
+        if (self.feature_type != 'qInTitle'):
+            self.settings.pop('qInTitle', None)
         
     def generate_articles(self, n:int=10)->[dict]:
         if self.feature_value == None:
             raise Exception("BACKEND EXCEPTION: 'ArticlesArrayGen' class, 'generate_articles' function was called before 'search' function")
 
+        print(self.settings)
         api_ret = api.news_api(**self.settings)
 
         # print('sushi')
@@ -382,9 +400,7 @@ def search_articles_keywords():
     if data == None:
         raise Exception("BACKEND ERROR: 'request.json' was None (keyword)")
 
-    print(type(data))
-
-    desired_keywords = data.get('keywords')
+    desired_keywords = data.get('keywords').split(' ')
     
     if desired_keywords == None:
         raise Exception("BACKEND ERROR: 'keywords' key is not present in JSON data passed to backend")

@@ -69,7 +69,8 @@ hr {
 .news-image {
     width: 12rem;
     height: 12rem;
-    border-radius: 6px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .news-card-col {

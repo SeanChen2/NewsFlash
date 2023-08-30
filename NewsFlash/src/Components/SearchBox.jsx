@@ -2,13 +2,6 @@ import {useState} from "react"
 import { useNavigate } from "react-router-dom";
 import axios from "axios"
 
-let axiosConfig = {
-    headers: {
-        'Content-Type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*",
-    }
-  };
-
 export default function SearchBox() {
     const [keywords, setKeywords] = useState("")
     const navigate = useNavigate();
@@ -16,26 +9,13 @@ export default function SearchBox() {
     const handleSubmit = async event => {
         event.preventDefault()
 
-        if (keywords.split(" ").length < 1 || keywords.split(" ").length > 5) {
+        if (keywords === "" || keywords.split(" ").length < 1 || keywords.split(" ").length > 5) {
             console.log("returned1")
             //ERROR MESSAGE
             return
         }
 
-        
-        console.log(JSON.stringify({keywords: keywords}))
-        
-        try {
-            const status = await axios.post('http://localhost:5000/search_articles_keywords', JSON.stringify({keywords: keywords}), axiosConfig)
-            const articles = await axios.get('http://localhost:5000/get_articles_keywords').then(res => {
-                const yourSavedData = res.data;
-                console.log(yourSavedData)
-            },)
-
-            console.log(articles)
-        } catch (error) {
-            console.error(error)
-        }
+        navigate("/search", {state: {keywords: keywords}})
 
         setKeywords("")
     }
