@@ -48,10 +48,32 @@ def write_user_json_with_dict(path:str, dic:dict):
     with open(path, "w") as json_file:
         json.dump(dic, json_file, indent=4)
 
+# Global field that stores the summary from the generate_content_summary post request
+content_summary = "[Summary goes here]"
+
+@app.route("/generate_content_summary", methods=['GET', 'POST'])
+def generate_content_summary():
+
+    data = request.json
+    if data == None:
+        raise Exception("BACKEND ERROR: 'request.json' was None (generate summary)")
+
+    content = data.get('content')
+    if content == None:
+        raise Exception("BACKEND ERROR: 'content' key is not present in JSON data passed to backend")
+    
+    global content_summary
+    content_summary = get_text_summary(content)
+
+    return jsonify({'status':'successful'})
+
+
+@app.route("/get_content_summary", methods=['GET', 'POST'])
+def get_content_summary():
+    return jsonify({'summary':content_summary})
+
 
 def get_text_summary(txt:str, summary_num_sentences:int=5)->str:
-    #MUST FIX: generate summary each time the summary button is clicked, instead of right away
-    return ""
 
     payload={
         'key': MEANINGCLOUD_KEY,
@@ -103,14 +125,15 @@ def cut_off_n_words(txt:str, n:int=30):
 #     return jsonify(articles)
 
 
-# TO RETURN JSON: what it neads: image, category, title, cut off content thing, summary
+# TO RETURN JSON: what it neads: image, category, title, cut off content thing
 def filter_article(article:dict)->dict:
     new_article = {}
     new_article['title'] = article['title']
     new_article['category'] = article['category']
     new_article['image_url'] = article['image_url']
+    new_article['full_content'] = article['content']
     new_article['content'] = cut_off_n_words(article['content'])
-    new_article['summary'] = get_text_summary(article['content'])
+    new_article['link'] = article['link']
     
     return new_article
 
@@ -281,7 +304,7 @@ class ArticlesArrayGen(Articles):
 
         if (self.feature_type != 'category'):
             self.settings.pop('category', None)
-            
+
         if (self.feature_type != 'qInTitle'):
             self.settings.pop('qInTitle', None)
         

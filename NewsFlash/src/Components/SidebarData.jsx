@@ -51,7 +51,7 @@ export const SidebarData = [
     },
     {
         title: "Tourism",
-        path: "/tech",
+        path: "/tourism",
         cName: "tech-text"
     },
     {

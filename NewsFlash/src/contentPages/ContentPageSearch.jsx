@@ -61,8 +61,9 @@ export default function ContentPageSearch() {
                             img={article['image_url']}
                             categories={article['category']}
                             title={article['title']}
+                            fullContent={article['full_content']}
                             shortText={article['content']}
-                            summary={article['summary']}
+                            link={article['link']}
                         />
                         )
                     )) : null

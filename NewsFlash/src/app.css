@@ -67,8 +67,8 @@ hr {
 }
 
 .news-image {
-    width: 12rem;
-    height: 12rem;
+    width: 16rem;
+    height: 16rem;
     object-fit: cover;
     border-radius: 20px;
 }

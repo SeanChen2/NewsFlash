@@ -55,8 +55,9 @@ export default function ContentPage({ category }) {
                             img={article['image_url']}
                             categories={article['category']}
                             title={article['title']}
+                            fullContent={article['full_content']}
                             shortText={article['content']}
-                            summary={article['summary']}
+                            link={article['link']}
                         />
                         )
                     )) : null   //This is where a loading icon would be placed

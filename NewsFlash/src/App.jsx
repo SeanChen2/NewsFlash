@@ -22,7 +22,7 @@ export default function App() {
       <Route path="/politics" element={<ContentPage category="politics"/>}/>
       <Route path="/science" element={<ContentPage category="science"/>}/>
       <Route path="/sports" element={<ContentPage category="sports"/>}/>
-      <Route path="/tech" element={<ContentPage category="tech"/>}/>
+      <Route path="/tech" element={<ContentPage category="technology"/>}/>
       <Route path="/tourism" element={<ContentPage category="tourism"/>}/>
       <Route path="/world" element={<ContentPage category="world"/>}/>
       <Route path="/search" element={<ContentPageSearch/>}/>
