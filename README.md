@@ -5,9 +5,8 @@ Using NewsFlash, you can read the latest articles from thousands of reputable ne
 
 **Built with:** ReactJS, CSS, Python, Flask, NewsData API, MeaningCloud API
 
-![image1](https://github.com/SeanChen2/NewsFlash/blob/main/PreviewImages/image1.png?raw=true)
-![image2](https://github.com/SeanChen2/NewsFlash/blob/main/PreviewImages/image2.png?raw=true)
-![image3](https://github.com/SeanChen2/NewsFlash/blob/main/PreviewImages/image3.png?raw=true)
+<img src="PreviewImages/image3.png"/>
+<img src="PreviewImages/image2.png" width="425"/> <img src="image1.png" width="425"/>
 
 ## Description
 NewsFlash displays brief overviews of news articles from various sources, sorted by category.
