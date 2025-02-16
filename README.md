@@ -7,7 +7,7 @@ Using NewsFlash, you can read the latest articles from thousands of reputable ne
 
 <div style="display:flex;">
   <img src="PreviewImages/image3.png"/>
-  <img src="PreviewImages/image2.png" width="45%"/> <img src="PreviewImages/image1.png" width="45%"/>
+  <img src="PreviewImages/image2.png" width="50%"/> <img src="PreviewImages/image1.png" width="50%"/>
 </div>
 
 ## Description
